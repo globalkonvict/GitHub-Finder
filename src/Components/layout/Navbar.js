@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 
 const Navbar = ({ icon, title }) => {
   return (
-    <nav className='w-full bg-gray-900 mb-12 p-1 px-3 shadow-2xl'>
-      <h1 className="text-4xl text-white">
+    <nav className={tailwind.navbar}>
+      <h1 className={tailwind.title}>
         <i className={icon}></i> {title}
       </h1>
     </nav>
@@ -18,6 +18,11 @@ Navbar.defaultProps = {
 
 Navbar.propTypes = {
   title: PropTypes.string.isRequired,
+};
+
+const tailwind = {
+  navbar: 'bg-black w-full mb-12 p-3 shadow-2xl',
+  title: 'text-3xl text-white',
 };
 
 export default Navbar;
